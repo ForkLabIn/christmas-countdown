@@ -1,9 +1,10 @@
 function countdown(){
     var now = new Date();
     if (now.getMonth()==11 && now.getDate()==25){
-        $("#countdown").text("Today is Christmas!");
+        $("#countdown").text("");
         $("#until").text("Merry Christmas!");
-        $("#count-top").text("");
+        $("#count-top").text("Today is Christmas!");
+        window.clearInterval(repeatcountdown);
     }
     else{
         if (now.getMonth()==11 && now.getDate()>25){
@@ -29,5 +30,5 @@ function countdown(){
 
 function start(){
     countdown();
-    window.setInterval(countdown, 1000);
+    var repeatcountdown = window.setInterval(countdown, 1000);
 }
