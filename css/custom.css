@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Satisfy';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Satisfy'), url(../fonts/Satisfy.ttf) format('truetype');
+}
+
 .main{
     padding-top: 70px;
     background: #000000;
@@ -9,4 +16,8 @@
 
 .second-row{
     padding-top: 50px;
+}
+
+.font{
+    font-family: 'Satisfy', cursive;
 }
