@@ -55,10 +55,14 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>Christmas Countdown</h1>
+                <noscript>
+                    You should ask for a computer with JavaScript for Christmas
+                    (Or just turn on JavaScript)
+                </noscript>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6 text-center second-row">
+        <div class="row second-row">
+            <div class="col-lg-6 text-center">
                 <h3 id="count-top">There are only</h3>
                 <div id="countdown">
                     <h1><b id="days"></b> Days</h1>
@@ -67,6 +71,9 @@
                     <h1><b id="secs"></b> Seconds</h1>
                 </div>
                 <h3 id="until">Until Christmas</h3>
+            </div>
+            <div class="col-lg-6 text-center">
+                <canvas id="scene" width="410px" height="500px" class="tree"></canvas>
             </div>
         </div>
     </div>
@@ -77,19 +84,27 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     
+    <!-- Tree -->
+    <script src="js/tree.js"></script>
+    
     <!-- Snowfall -->
     <script src="js/snowfall.min.js"></script>
     
+    <!-- Countdown -->
     <script src="js/countdown.js"></script>
     
     <script type='text/javascript'>     
         $(document).ready(function(){
+            
+            // tree
+            run();
             
             // snowfall
             $(document).snowfall('clear');
             document.body.className  = "main";
             $(document).snowfall({image :"img/flake.png", minSize: 6, maxSize:15});
             
+            // countdown
             start();
         });
     </script>
