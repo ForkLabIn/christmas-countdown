@@ -1,2 +1,2 @@
-# christmas-countdown
-Webpage that shows a countdown until christmas
+# Christmas Countdown
+Webpage that displays a countdown until christmas
