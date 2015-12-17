@@ -70,7 +70,7 @@
                     <h1 class="red"><b id="mins" class="green"></b> Minutes</h1>
                     <h1 class="green"><b id="secs" class="red"></b> Seconds</h1>
                 </div>
-                <h3 id="until" class="red">Until Christmas</h3>
+                <h3 id="until" class="red">until Christmas</h3>
                 <div class="visible-xs visible-sm"><br><br><br></div>
             </div>
             <div class="col-md-6 text-center hidden-sm hidden-xs">
@@ -106,14 +106,11 @@
                 run();
             }
             
-            // snowfall (not on mobile)
-            if ($("#scene").is(":visible")){
-                $(document).snowfall('clear');
-                document.body.className  = "main";
-                $(document).snowfall({image :"img/flake.png", minSize: 6, maxSize:15});
-            }
+            // snowfall 
+            $(document).snowfall('clear');
+            document.body.className  = "main";
+            $(document).snowfall({image :"img/flake.png", minSize: 6, maxSize:15});
             
-            console.log($("#scene").is(":visible"));
             // countdown
             start();
         });
