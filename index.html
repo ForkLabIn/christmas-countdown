@@ -71,6 +71,7 @@
                     <h1 class="green"><b id="secs" class="red"></b> Seconds</h1>
                 </div>
                 <h3 id="until" class="red">Until Christmas</h3>
+                <div class="visible-xs visible-sm"><br><br><br></div>
             </div>
             <div class="col-md-6 text-center hidden-sm hidden-xs">
                 <canvas id="scene" width="410px" height="500px" class="tree"></canvas>
@@ -100,14 +101,19 @@
     <script type='text/javascript'>     
         $(document).ready(function(){
             
-            // tree
-            run();
+            // tree (not on mobile)
+            if ($("#scene").is(":visible")){
+                run();
+            }
             
-            // snowfall
-            $(document).snowfall('clear');
-            document.body.className  = "main";
-            $(document).snowfall({image :"img/flake.png", minSize: 6, maxSize:15});
+            // snowfall (not on mobile)
+            if ($("#scene").is(":visible")){
+                $(document).snowfall('clear');
+                document.body.className  = "main";
+                $(document).snowfall({image :"img/flake.png", minSize: 6, maxSize:15});
+            }
             
+            console.log($("#scene").is(":visible"));
             // countdown
             start();
         });
